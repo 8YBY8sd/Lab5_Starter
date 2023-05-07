@@ -12,15 +12,16 @@ function init() {
   //// select a horn from the drop down menu
   const hornSelect = document.getElementById("horn-select");
 
-  // Event listener for horn selection
+  // Event listener 
   hornSelect.addEventListener("change", () => {
     const selectedHorn = hornSelect.value;
 
     // The correct image should display
-    document.querySelector("#expose img").src = `./assets/images/${selectedHorn}.svg`;
+    //EX) document.querySelector("[type='radio']") will select an element like <input type="radio"/>
+    document.querySelector("[alt='No image selected']").src = `./assets/images/${selectedHorn}.svg`;
 
     // The correct audio sound file should be set
-    document.querySelector("#expose audio").src = `./assets/audio/${selectedHorn}.mp3`;
+    document.querySelector("audio").src = `./assets/audio/${selectedHorn}.mp3`;
   });
 
   
